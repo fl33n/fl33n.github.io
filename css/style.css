@@ -1,69 +1,172 @@
-/* =============================================================================
-   HTML5 CSS Reset Minified - Eric Meyer
-   ========================================================================== */
-
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
-body{line-height:1}
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
-nav ul{list-style:none}
-blockquote,q{quotes:none}
-blockquote:before,blockquote:after,q:before,q:after{content:none}
-a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
-mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
-del{text-decoration:line-through}
-abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
-table{border-collapse:collapse;border-spacing:0}
-hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
-input,select{vertical-align:middle}
-li{list-style:none}
-
-
-/* =============================================================================
-   My CSS
-   ========================================================================== */
-
-/* ---- base ---- */
-
-html,body{ 
-	width:100%;
-	height:100%;
-	background:#111;
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+body {
+  margin: 0;
 }
 
-html{
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+h1 {
+  font-family: 'Gilroy';
+  src: local('Gilroy Light'), local('Gilroy-Light'),
+      url('Gilroy-Light.woff2') format('woff2'),
+      url('Gilroy-Light.woff') format('woff'),
+      url('Gilroy-Light.ttf') format('truetype');
+  letter-spacing: 2px;
+  font-size: 48px;
+  font-style: normal;
+}
+h3 {
+  font-family: 'Gilroy';
+  src: local('Gilroy Light'), local('Gilroy-Light'),
+      url('Gilroy-Light.woff2') format('woff2'),
+      url('Gilroy-Light.woff') format('woff'),
+      url('Gilroy-Light.ttf') format('truetype');
+  letter-spacing: 2px;
+  font-style: normal;
+}
+p {
+  font-family: 'Gilroy';
+  src: local('Gilroy Light'), local('Gilroy-Light'),
+      url('Gilroy-Light.woff2') format('woff2'),
+      url('Gilroy-Light.woff') format('woff'),
+      url('Gilroy-Light.ttf') format('truetype');
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-style: normal;
 }
 
-body{
-  font:normal 75% Arial, Helvetica, sans-serif;
+.header {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+  color: white;
 }
-
-canvas{
-  display:block;
-  vertical-align:bottom;
+.logo {
+  width: 50px;
+  fill: white;
+  padding-right: 15px;
+  display: inline-block;
+  vertical-align: middle;
 }
-
-
-/* ---- stats.js ---- */
-
-
-.js-count-particles{
-  font-size: 1.1em;
-}
-
-.count-particles{
-  border-radius: 0 0 3px 3px;
-}
-
-
-/* ---- particles.js container ---- */
-
-#particles-js{
+.inner-header {
+  height: 65vh;
   width: 100%;
-  height: 100%;
-  background-color: #b61924;
-  background-image: url('');
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+.flex {
+  /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
+}
+.content {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+  background-color: white;
+}
+
+/* Animation */
+.parallax>use {
+  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+.parallax>use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax>use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax>use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax>use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+.social-icons-4 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 10px;
+}
+.social-icons-4 a {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background: #efefef;
+    position: relative;
+    margin: 5px;
+    text-align: center;
+    box-shadow: 0 2px 6px #c1c1c1;
+    font-size: 32px;
+    color: #337AB7;
+    transition: 0.5s;
+}
+.social-icons-4 a img {
+    width: 32px;
+    height: 32px;
+    margin-top: 14px;
+}
+.social-icons-4 a i,
+.social-icons-4 a img {
+    z-index:2;
+    position: relative;
+    line-height: 60px;
+}
+.social-icons-4 a:hover {
+    color: #fff;
+}
+.social-icons-4 a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: #BFE2FF;
+    border-radius: 100%;
+    width: 0;
+    height: 0;
+    transition: 0.3s;
+    top: 0;
+    left: 50%;
+}
+.social-icons-4 a:hover:after {
+    width: 60px;
+    height: 60px;
+    margin-left: -30px;
+    background: #337AB7;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+  .content {
+    height: 30vh;
+  }
+  h1 {
+    font-size: 24px;
+  }
 }
