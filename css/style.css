@@ -44,6 +44,7 @@ div#block{
   filter: alpha(Opacity=70);
 }
 img.avatar {
+  width:50px;
   border-radius: 50%;
 }
 .header {
