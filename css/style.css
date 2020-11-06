@@ -11,7 +11,12 @@ body {
   text-rendering: auto;
   line-height: 1; 
 }
-
+.fa-telegram-plane:before {
+  content: "\f3fe";
+}
+.fa-github:before {
+  content: "\f09b";
+}
 h1 {
   font-family: 'Gilroy';
   src: local('Gilroy Light'), local('Gilroy-Light'),
