@@ -38,7 +38,7 @@ div#block{
   border: 1px solid;
   border-radius: 20px;
   width: 250px;
-  height: 300px;
+  height: 400px;
   background: white;
   opacity: 0.75;
   filter: alpha(Opacity=70);
@@ -47,6 +47,8 @@ img.avatar {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  opacity: 1;
+  filter: alpha(Opacity=100);
 }
 .header {
   position: relative;
