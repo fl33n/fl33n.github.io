@@ -1,6 +1,8 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 body {
   margin: 0;
 }
+
 h1 {
   font-family: 'Gilroy';
   src: local('Gilroy Light'), local('Gilroy-Light'),
@@ -8,8 +10,8 @@ h1 {
       url('Gilroy-Light.woff') format('woff'),
       url('Gilroy-Light.ttf') format('truetype');
   letter-spacing: 2px;
-  font-size: 48px;
   font-style: normal;
+  color: black;
 }
 h3 {
   font-family: 'Gilroy';
@@ -19,6 +21,7 @@ h3 {
       url('Gilroy-Light.ttf') format('truetype');
   letter-spacing: 2px;
   font-style: normal;
+  color: black;
 }
 p {
   font-family: 'Gilroy';
@@ -29,8 +32,17 @@ p {
   letter-spacing: 2px;
   font-size: 14px;
   font-style: normal;
+  color: black; 
 }
-
+div#block{
+  border: 1px solid;
+  border-radius: 20px;
+  width: 250px;
+  height: 300px;
+  background: white;
+  opacity: 0.75;
+  filter: alpha(Opacity=70);
+}
 .header {
   position: relative;
   text-align: center;
@@ -93,59 +105,63 @@ p {
   animation-delay: -5s;
   animation-duration: 20s;
 }
-.social-icons-4 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 10px;
-}
-.social-icons-4 a {
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    border-radius: 100%;
-    background: #efefef;
-    position: relative;
-    margin: 5px;
+
+
+.social a {
     text-align: center;
-    box-shadow: 0 2px 6px #c1c1c1;
-    font-size: 32px;
-    color: #337AB7;
-    transition: 0.5s;
+    width: 48px;
+    height: 48px;
+    float: left;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15), inset 0 0 50px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    margin: 0 10px 10px 0;
+    padding: 6px;
+    color: #000;
+    font-size: 40px;
 }
-.social-icons-4 a img {
-    width: 32px;
-    height: 32px;
-    margin-top: 14px;
+.github a{
+    transform: translate(55px,40px);
+    -webkit-transform: translate(55px,40px); /** Chrome & Safari **/
+    -o-transform: translate(55px,40px); /** Opera **/
+    -moz-transform: translate(55px,40px); /** Firefox **/
+    text-align: center;
 }
-.social-icons-4 a i,
-.social-icons-4 a img {
-    z-index:2;
-    position: relative;
-    line-height: 60px;
+.telegram a{
+    transform: translate(50px,40px);
+    -webkit-transform: translate(50px,40px); /** Chrome & Safari **/
+    -o-transform: translate(50px,40px); /** Opera **/
+    -moz-transform: translate(50px,40px); /** Firefox **/
+    text-align: center;
 }
-.social-icons-4 a:hover {
-    color: #fff;
+.github a:hover {
+  transition: 1s;
+  background: #191919; color: #fff;
+  font-size: 40px;
 }
-.social-icons-4 a:after {
-    content: '';
-    display: block;
-    position: absolute;
-    background: #BFE2FF;
-    border-radius: 100%;
-    width: 0;
-    height: 0;
-    transition: 0.3s;
-    top: 0;
-    left: 50%;
+.telegram a:hover {
+  transition: 1s;
+  background: SteelBlue; color: #fff;
+  font-size: 40px;
 }
-.social-icons-4 a:hover:after {
-    width: 60px;
-    height: 60px;
-    margin-left: -30px;
-    background: #337AB7;
+
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter p {
+  color: black;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
 }
+
+
+
 
 @keyframes move-forever {
   0% {
@@ -168,3 +184,14 @@ p {
     font-size: 24px;
   }
 }
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: SteelBlue }
