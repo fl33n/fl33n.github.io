@@ -3,21 +3,6 @@
 body {
   margin: 0;
 }
-.fab {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1; 
-}
-.fa-telegram-plane:before {
-  content: "\f3fe";
-}
-.fa-github:before {
-  content: "\f09b";
-}
 h1 {
   font-family: 'Gilroy';
   src: local('Gilroy Light'), local('Gilroy-Light'),
