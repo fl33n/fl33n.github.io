@@ -174,7 +174,7 @@ video.avatar {
   }
 }
 /*Shrinking for mobile*/
-@media (max-width: 480px) {
+@media only screen and (max-width:320px) {
   .waves {
     height: 40px;
     min-height: 40px;
