@@ -20,13 +20,15 @@
                 <h3>Python developer</h3>
             </div>
 
-            <h2>
-                <b>
-                    <p href="" class="typewrite" data-period="2000" data-type='[ "Im love Python", "Only python 3.x.x", "Big cock", "Boss of this gym", "ONYX Project" ]'>
-                        <span class="wrap"></span>
-                    </p>
-                </b>
-            </h2>
+            <div align="center">
+                <h2>
+                    <b>
+                        <p href="" class="typewrite" data-period="2000" data-type='[ "Im love Python", "Only python 3.x.x", "Big cock", "Boss of this gym", "ONYX Project" ]'>
+                            <span class="wrap"></span>
+                        </p>
+                    </b>
+                </h2>
+            </div>
 
             <script type="text/javascript">
                 var TxtType = function(el, toRotate, period) {
@@ -112,6 +114,44 @@
 </div>
 
 <!-- partial -->
-  
+<script type="text/javascript">
+    (function(){
+            function getDeviceWidth()
+              {
+                var deviceWidth = window.orientation == 0 ? window.screen.width : window.screen.height;
+                if (navigator.userAgent.indexOf('Android') >= 0 && window.devicePixelRatio)
+                  deviceWidth = deviceWidth / window.devicePixelRatio;
+     
+                return deviceWidth;
+              }
+            function getDeviceHeight()
+              {
+                var deviceHeight = window.orientation == 90 ? window.screen.height : window.screen.width;
+                if (navigator.userAgent.indexOf('Android') >= 0 && window.devicePixelRatio)
+                  deviceHeight = deviceHeight / window.devicePixelRatio;
+     
+                return deviceHeight;
+              }
+            
+     
+              var deviceWidth = getDeviceWidth();
+              var deviceHeight = getDeviceHeight();
+              
+              var minWidth = 1238;
+                          
+                if (window.orientation == 0 || window.orientation == 180)
+                 {
+                   if (window.innerHeight<minWidth) {
+                   var scal=window.innerHeight/minWidth;}else{
+                     var scal=1.0;
+                   };
+                  document.write('<meta name="viewport" content="width=' + minWidth + ',initial-scale ='+ scal +'" >');
+                 } else  
+                 {
+                   var scal=window.innerWidth/minWidth;
+                   document.write('<meta name="viewport" content="width=' + minWidth + ',initial-scale ='+ scal +'" >');
+                 };
+            }());
+</script>
 </body>
 </html>
