@@ -172,7 +172,7 @@ video.avatar {
   }
 }
 /*Shrinking for mobile*/
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .waves {
     height: 40px;
     min-height: 40px;
