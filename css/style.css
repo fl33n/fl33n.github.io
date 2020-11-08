@@ -35,6 +35,10 @@ div.block{
   border-radius: 20px;
   width: 250px;
   height: 380px;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  margin: -125px 0 0 -125px;
   background: rgba(255, 255, 255, 0.45);
 }
 video.avatar {
@@ -176,7 +180,7 @@ video.avatar {
   }
 }
 /*Shrinking for mobile*/
-@media only screen and (max-width:320px) {
+@media only screen and (max-width:780px) {
   .waves {
     height: 40px;
     min-height: 40px;
